@@ -21,6 +21,7 @@ const winPatterns = [
 
 const resetGame = () => {
     turnO = true;
+    count = 0;
     enableBoxes();
     msgContainer.classList.add("hide");
 };
@@ -77,6 +78,7 @@ const checkWinner = () => {
         }
         if(count === 9 && pos1Val != pos2Val && pos2Val != pos3Val){
             msg.innerText = "Game is Draw";
+            msgContainer.classList.remove("hide");
         }
     }
 };
